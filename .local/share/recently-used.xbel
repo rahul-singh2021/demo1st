@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///root/Downloads/sonarqube-26.4.0.121862.zip" added="2026-04-13T05:10:31.792405Z" modified="2026-04-13T05:10:31.792463Z" visited="2026-04-13T05:10:31.792419Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-04-13T05:10:31.792447Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/Downloads/jenkins.war" added="2026-04-13T05:14:33.734056Z" modified="2026-04-13T05:14:33.734109Z" visited="2026-04-13T05:14:33.734072Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-04-13T05:14:33.734089Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/Downloads/nexus-3.91.0-07-linux-x86_64.tar.gz" added="2026-04-13T05:22:52.649992Z" modified="2026-04-13T05:22:52.650035Z" visited="2026-04-13T05:22:52.650005Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-04-13T05:22:52.650020Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

@@ -1,0 +1,1222 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';">
+    <meta name="color-scheme" content="light dark">
+    <title data-l10n-id="newtab-page-title"></title>
+    <link rel="icon" type="image/png" href="chrome://branding/content/icon32.png"/>
+    <link rel="localization" href="branding/brand.ftl" />
+    <link rel="localization" href="toolkit/branding/brandings.ftl" />
+    <link rel="localization" href="browser/newtab/newtab.ftl" />
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css" />
+    <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css" />
+  </head>
+  <!-- Cached: Mon, 13 Apr 2026 05:24:30 GMT -->
+  <body class="activity-stream">
+    <div id="header-asrouter-container" role="presentation"></div>
+    <div id="root">
+      <div><menu class="personalizeButtonWrapper"><span><button class="icon icon-settings personalize-button" data-l10n-id="newtab-personalize-icon-label"></button><div class="customize-menu" role="dialog" data-l10n-id="newtab-personalize-dialog-label"><div class="close-button-wrapper"><button class="close-button" data-l10n-id="newtab-custom-close-button"></button></div><div class="home-section"><div id="shortcuts-section" class="section"><moz-toggle id="shortcuts-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" data-preference="feeds.topsites" data-eventSource="TOP_SITES" data-l10n-id="newtab-custom-shortcuts-toggle" data-l10n-attrs="label, description"></moz-toggle><div><div class="more-info-top-wrapper"><div class="more-information"><select id="row-selector" class="selector" name="row-count" data-preference="topSitesRows" aria-labelledby="custom-shortcuts-title"><option selected="" value="1" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 1}"></option><option value="2" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 2}"></option><option value="3" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 3}"></option><option value="4" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 4}"></option></select><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-shortcuts" class="sponsored-checkbox" checked="" data-preference="showSponsoredTopSites" data-eventSource="SPONSORED_TOP_SITES"/><label class="sponsored" for="sponsored-shortcuts" data-l10n-id="newtab-custom-sponsored-sites"></label></div></div></div></div></div><div id="pocket-section" class="section"><label class="switch"><moz-toggle id="pocket-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" aria-describedby="custom-pocket-subtitle" data-preference="feeds.section.topstories" data-eventSource="TOP_STORIES" data-l10n-id="newtab-custom-stories-toggle" data-l10n-attrs="label, description"></moz-toggle></label><div></div></div><div id="recent-section" class="section"><label class="switch"><moz-toggle id="highlights-toggle" onToggle="function() {
+    [native code]
+}" data-preference="feeds.section.highlights" data-eventSource="HIGHLIGHTS" data-l10n-id="newtab-custom-recent-toggle" data-l10n-attrs="label, description"></moz-toggle></label></div><span class="divider" role="separator"></span><div><button id="settings-link" class="external-link" data-l10n-id="newtab-custom-settings"></button></div></div></div></span></menu><div class="outer-wrapper ds-outer-wrapper-search-alignment ds-outer-wrapper-breakpoint-override visible-logo"><main><div class="non-collapsible-section"><div class="search-wrapper"><div class="logo-and-wordmark"><div class="logo"></div><div class="wordmark"></div></div><div class="search-inner-wrapper"><button class="search-handoff-button" tabindex="-1"><div class="fake-textbox"></div><input type="search" class="fake-editable" tabindex="-1" aria-hidden="true"/><div class="fake-caret"></div></button></div></div></div><div class="body-wrapper on"><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div class="ds-top-sites"><section class="collapsible-section top-sites" data-section-id="topsites"><div class="section-top-bar"><h3 class="section-title-container " style="visibility:hidden"><span class="section-title"><span data-l10n-id="newtab-section-header-topsites"></span></span><span class="learn-more-link-wrapper"></span></h3></div><div><ul class="top-sites-list"><li class="top-site-outer placeholder  "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/></span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.wikipedia.org/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="W"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png)"></div></div></div><div class="title"><span dir="auto">Wikipedia</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Wikipedia&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.youtube.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="Y"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png)"></div></div></div><div class="title"><span dir="auto">YouTube</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;YouTube&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="http://ndtv.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper letter-fallback" data-fallback="N" style="background-color:#FF4F5F"><div class=""></div></div></div><div class="title"><span dir="auto">NDTV</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;NDTV&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.reddit.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="R"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Reddit</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Reddit&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer placeholder  add-button"><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="n"><div class=""></div></div></div><div class="title"><span dir="auto" data-l10n-id="newtab-topsites-add-shortcut-label">newtab-topsites-add-shortcut-label</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li></ul><div class="edit-topsites-wrapper"></div></div></section></div></div></div></div><style data-styles="[[null]]"></style></div><section class="collapsible-section ds-layout" data-section-id="topstories"><div class="section-top-bar"><h3 class="section-title-container "><span class="section-title"><span data-l10n-id="newtab-section-header-stories"></span></span><span class="learn-more-link-wrapper"><span class="learn-more-link"><a href="https://getpocket.com/firefox/new_tab_learn_more" data-l10n-id="newtab-pocket-learn-more"></a></span></span></h3></div><div><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div><div class="ds-card-grid    ds-card-grid-include-descriptions "><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg 404w"/></picture></div><a href="https://www.hindustantimes.com/trending/no-job-no-skills-at-26-woman-shares-how-she-found-direction-after-years-of-setbacks-101775906314445.html?utm_source=firefox-newtab-en-intl" title="‘No Job, No Skills at 26’: Woman Shares How She Found Direction After Years of Setbacks" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Hindustan Times</p><header class="title clamp">‘No Job, No Skills at 26’: Woman Shares How She Found Direction After Years of Setbacks</header><p class="excerpt clamp">A woman shared how she went from jobless at 26 to rebuilding her career and helping others restart after career gaps. | Trending</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;‘No Job, No Skills at 26’: Woman Shares How She Found Direction After Years of Setbacks&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/f7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg 404w"/></picture></div><a href="https://www.firstpost.com/lifestyle/youre-sleeping-8-hours-so-why-are-you-still-exhausted-13997965.html?utm_source=firefox-newtab-en-intl" title="You’re Sleeping 8 Hours — So Why Are You Still Exhausted?" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Firstpost</p><header class="title clamp">You’re Sleeping 8 Hours — So Why Are You Still Exhausted?</header><p class="excerpt clamp">Sleep scientists say the hours don’t matter as much as what happens inside them. Here’s why your body stops recovering during the night, and what you can do to fix it.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;You’re Sleeping 8 Hours — So Why Are You Still Exhausted?&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d535ce87-fc2d-4cb8-b03e-896de608421c.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd535ce87-fc2d-4cb8-b03e-896de608421c.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd535ce87-fc2d-4cb8-b03e-896de608421c.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd535ce87-fc2d-4cb8-b03e-896de608421c.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd535ce87-fc2d-4cb8-b03e-896de608421c.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd535ce87-fc2d-4cb8-b03e-896de608421c.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd535ce87-fc2d-4cb8-b03e-896de608421c.jpeg 404w"/></picture></div><a href="https://www.mensxp.com/entertainment/bollywood/183132-remembering-asha-bhosle-the-queen-of-bollywood-vamp-songs-dance-numbers.html?utm_source=firefox-newtab-en-intl" title="Remembering Asha Tai: How Asha Bhosle Gave Bollywood’s Vamps Their Most Seductive Voice" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Mens XP</p><header class="title clamp">Remembering Asha Tai: How Asha Bhosle Gave Bollywood’s Vamps Their Most Seductive Voice</header><p class="excerpt clamp">As Asha Bhosle passes away due to cardiac arrest in Mumbai, we can’t help but remember her legacy as the queen of Bollywood’s iconic vamp music and dance numbers.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Remembering Asha Tai: How Asha Bhosle Gave Bollywood’s Vamps Their Most Seductive Voice&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg 404w"/></picture></div><a href="https://www.architecturaldigest.in/story/beautiful-mosques-old-and-new-designed-by-women/?utm_source=firefox-newtab-en-intl" title="5 Beautiful Mosques, Old and New, Designed by Women" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">AD India</p><header class="title clamp">5 Beautiful Mosques, Old and New, Designed by Women</header><p class="excerpt clamp">In 859 Fez, refugee, Fatima Al-Fihri designed Al Qarawiyyin university and mosque, the world&#x27;s oldest, predating Oxford University and the Sorbonne</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;5 Beautiful Mosques, Old and New, Designed by Women&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg 404w"/></picture></div><a href="https://www.hindustantimes.com/lifestyle/health/harvard-columbia-cornell-trained-american-doctor-shares-secret-hack-to-literally-grow-your-brain-even-as-an-adult-daily-101775894439350.html?utm_source=firefox-newtab-en-intl" title="Harvard, Columbia, Cornell-Trained Doctor Shares ‘Secret Hack to Literally Grow Your Brain Even As an Adult’: So Easy…" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Hindustan Times</p><header class="title clamp">Harvard, Columbia, Cornell-Trained Doctor Shares ‘Secret Hack to Literally Grow Your Brain Even As an Adult’: So Easy…</header><p class="excerpt clamp">Low-impact activities like daily walking are crucial for neurological health in midlife, helping to alleviate stress and enhance brain function, Dr Shah said</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Harvard, Columbia, Cornell-Trained Doctor Shares ‘Secret Hack to Literally Grow Your Brain Even As an Adult’: So Easy…&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg 404w"/></picture></div><a href="https://www.vogue.in/content/the-best-thing-to-bring-back-from-your-travels-a-hobby?utm_source=firefox-newtab-en-intl" title="The Best Thing to Bring Back From Your Travels? a Hobby" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Vogue India</p><header class="title clamp">The Best Thing to Bring Back From Your Travels? a Hobby</header><p class="excerpt clamp">Burnt out in their daily lives, people are touting ‘side quests’, ‘serial hobbies’ and ‘funmaxxing’ as alternative ways of travelling</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;The Best Thing to Bring Back From Your Travels? a Hobby&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg 404w"/></picture></div><a href="https://www.indiatoday.in/jobs/story/ai-skills-gap-grows-as-teens-build-businesses-and-earn-before-turning-18-educ-2894156-2026-04-11?utm_source=firefox-newtab-en-intl" title="Gen Z AI Kids Are Hiring Parents, Dropping School, and Building Real Businesses" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">India Today</p><header class="title clamp">Gen Z AI Kids Are Hiring Parents, Dropping School, and Building Real Businesses</header><p class="excerpt clamp">Gen Z is not just using AI, it is building with it. From a 12-year-old hiring her mother to teenage founders running AI startups, a new generation is racing ahead. The gap is growing between those who can truly use AI and those who cannot, shaping the future of work.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Gen Z AI Kids Are Hiring Parents, Dropping School, and Building Real Businesses&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg 404w"/></picture></div><a href="https://www.livemint.com/science/health/working-late-bengaluru-doctor-reveals-the-hidden-damage-to-your-heart-sleep-and-spine-11775762858662.html?utm_source=firefox-newtab-en-intl" title="Working Late? Bengaluru Doctor Reveals the Hidden Damage to Your Heart, Sleep and Spine" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Mint</p><header class="title clamp">Working Late? Bengaluru Doctor Reveals the Hidden Damage to Your Heart, Sleep and Spine</header><p class="excerpt clamp">Long working hours may seem unavoidable, but experts warn they can quietly impact heart health, spine, sleep and mental well-being. Here’s how your daily routine could be affecting your body — and what you can do about it.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Working Late? Bengaluru Doctor Reveals the Hidden Damage to Your Heart, Sleep and Spine&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/afa38b79-1667-4e0d-bea4-19a50b871baf.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fafa38b79-1667-4e0d-bea4-19a50b871baf.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fafa38b79-1667-4e0d-bea4-19a50b871baf.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fafa38b79-1667-4e0d-bea4-19a50b871baf.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fafa38b79-1667-4e0d-bea4-19a50b871baf.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fafa38b79-1667-4e0d-bea4-19a50b871baf.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fafa38b79-1667-4e0d-bea4-19a50b871baf.jpeg 404w"/></picture></div><a href="https://www.fortuneindia.com/business-news/from-kitchens-to-cloud-kitchens-ready-meals-gain-ground-as-india-eases-lpg-dependence/132275?utm_source=firefox-newtab-en-intl" title="From Kitchens to Cloud Kitchens, Ready Meals Gain Ground As India Eases LPG Dependence" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Fortune India</p><header class="title clamp">From Kitchens to Cloud Kitchens, Ready Meals Gain Ground As India Eases LPG Dependence</header><p class="excerpt clamp">From LPG shocks to ready meals: India’s kitchen is going convenience‑first</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;From Kitchens to Cloud Kitchens, Ready Meals Gain Ground As India Eases LPG Dependence&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2e317181-b99b-47db-be93-b3663c6503d5.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2e317181-b99b-47db-be93-b3663c6503d5.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2e317181-b99b-47db-be93-b3663c6503d5.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2e317181-b99b-47db-be93-b3663c6503d5.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2e317181-b99b-47db-be93-b3663c6503d5.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2e317181-b99b-47db-be93-b3663c6503d5.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2e317181-b99b-47db-be93-b3663c6503d5.jpeg 404w"/></picture></div><a href="https://www.thequint.com/news/breaking-news/pm-modi-urges-womens-reservation-act-implementation?utm_source=firefox-newtab-en-intl" title="PM Modi Urges All Parties to Clear Amendments to Women’s Reservation Bill" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The Quint</p><header class="title clamp">PM Modi Urges All Parties to Clear Amendments to Women’s Reservation Bill</header><p class="excerpt clamp">PM Modi calls for immediate Women’s Reservation Act implementation; opposition leaders demand transparency and all-party consultation before legislative changes.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;PM Modi Urges All Parties to Clear Amendments to Women’s Reservation Bill&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg 404w"/></picture></div><a href="https://www.theweek.in/theweek/leisure/2026/04/11/from-woodpeckers-to-crash-helmets-the-unconventional-science-of-ig-nobel-prize.html?utm_source=firefox-newtab-en-intl" title="From Woodpeckers to Crash Helmets: The Unconventional Science of Ig Nobel Prize" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The Week</p><header class="title clamp">From Woodpeckers to Crash Helmets: The Unconventional Science of Ig Nobel Prize</header><p class="excerpt clamp">Why is airlifting rhinos upside down the best way to transport them? Can rollercoasters help pass kidney stones? Welcome to the Ig Nobel Prizes and the science that makes you laugh first, and then think</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;From Woodpeckers to Crash Helmets: The Unconventional Science of Ig Nobel Prize&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg 404w"/></picture></div><a href="https://www.cricbuzz.com/cricket-news/138330/ipl-pulse-existential-but-make-it-cricket-cricbuzzcom?utm_source=firefox-newtab-en-intl" title="IPL Pulse: Existential, but Make It Cricket" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Cricbuzz</p><header class="title clamp">IPL Pulse: Existential, but Make It Cricket</header><p class="excerpt clamp">Your 2-minute morning scan of the IPL universe</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;IPL Pulse: Existential, but Make It Cricket&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/716316c6-0982-4350-b475-6c3c1ad22796.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F716316c6-0982-4350-b475-6c3c1ad22796.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F716316c6-0982-4350-b475-6c3c1ad22796.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F716316c6-0982-4350-b475-6c3c1ad22796.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F716316c6-0982-4350-b475-6c3c1ad22796.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F716316c6-0982-4350-b475-6c3c1ad22796.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F716316c6-0982-4350-b475-6c3c1ad22796.jpeg 404w"/></picture></div><a href="https://indianexpress.com/article/education/55-year-old-rajasthan-ex-serviceman-138-degrees-earns-latest-ignou-10632745/?utm_source=firefox-newtab-en-intl" title="55-Year-Old Rajasthan Ex-Serviceman With 138 Degrees Earns Latest From IGNOU" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The Indian Express</p><header class="title clamp">55-Year-Old Rajasthan Ex-Serviceman With 138 Degrees Earns Latest From IGNOU</header><p class="excerpt clamp">Dashrath Singh, who belongs to a farming family, said that he always felt his education was “incomplete” while in the service.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;55-Year-Old Rajasthan Ex-Serviceman With 138 Degrees Earns Latest From IGNOU&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8488d81e-1e56-4870-9c23-03300de3b880.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8488d81e-1e56-4870-9c23-03300de3b880.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8488d81e-1e56-4870-9c23-03300de3b880.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8488d81e-1e56-4870-9c23-03300de3b880.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8488d81e-1e56-4870-9c23-03300de3b880.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8488d81e-1e56-4870-9c23-03300de3b880.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8488d81e-1e56-4870-9c23-03300de3b880.jpeg 404w"/></picture></div><a href="https://www.forbes.com/sites/mariaross/2026/04/09/the-best-empathy-training-for-leaders-parenting-a-kid/?utm_source=firefox-newtab-en-intl" title="The Best Empathy Training for Leaders? Parenting a Kid" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Forbes</p><header class="title clamp">The Best Empathy Training for Leaders? Parenting a Kid</header><p class="excerpt clamp">The best empathy training doesn’t cost a dime. Three leadership lessons on modeling, perspective-taking, and walking your talk — learned from a 12-year-old.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;The Best Empathy Training for Leaders? Parenting a Kid&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg 404w"/></picture></div><a href="https://www.deccanherald.com/entertainment/actor-ranvir-shorey-says-indie-films-losing-ground-on-both-theatres-and-streaming-3964359?utm_source=firefox-newtab-en-intl" title="Actor Ranvir Shorey Says Indie Films Losing Ground on Both Theatres and Streaming" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Deccan Herald</p><header class="title clamp">Actor Ranvir Shorey Says Indie Films Losing Ground on Both Theatres and Streaming</header><p class="excerpt clamp">Theatre Challenges: Ranvir Shorey shares his concerns over indie films losing viewers on streaming platforms amid large-scale productions like Dhurandhar. Shorey, renowned for indie cinema, highlights the struggles of films like &#x27;Everybody Loves Sohrab Handa&#x27;.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Actor Ranvir Shorey Says Indie Films Losing Ground on Both Theatres and Streaming&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg 404w"/></picture></div><a href="https://theweek.com/personal-finance/satoshi-nakamoto-the-mystery-behind-the-creator-of-bitcoin?utm_source=firefox-newtab-en-intl" title="Satoshi Nakamoto: the mystery behind the creator of Bitcoin" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The Week</p><header class="title clamp">Satoshi Nakamoto: the mystery behind the creator of Bitcoin</header><p class="excerpt clamp">New investigation sheds light on identity of cryptocurrency’s shadowy founder</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Satoshi Nakamoto: the mystery behind the creator of Bitcoin&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/edee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fedee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fedee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fedee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fedee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fedee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fedee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg 404w"/></picture></div><a href="https://www.goodhousekeeping.com/life/parenting/a70984904/bad-kid-behavior-good-parenting-signs/?utm_source=firefox-newtab-en-intl" title="If Your Kids Do These “Bad” Things, It Could Actually Be a Sign of Good Parenting" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Good Housekeeping</p><header class="title clamp">If Your Kids Do These “Bad” Things, It Could Actually Be a Sign of Good Parenting</header><p class="excerpt clamp">You’re doing a better job than you think!</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;If Your Kids Do These “Bad” Things, It Could Actually Be a Sign of Good Parenting&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/a8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg 404w"/></picture></div><a href="https://www.investopedia.com/how-starting-to-save-at-25-35-or-45-affects-how-quickly-you-reach-usd1-million-11947921?utm_source=firefox-newtab-en-intl" title="How Starting to Save at 25, 35, or 45 Affects How Quickly You Reach $1 Million" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Investopedia</p><header class="title clamp">How Starting to Save at 25, 35, or 45 Affects How Quickly You Reach $1 Million</header><p class="excerpt clamp">Starting earlier doesn’t make $1M arrive faster—but it does mean getting there younger. Here’s how starting to save at 25, 35, or 45 changes the timeline.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;How Starting to Save at 25, 35, or 45 Affects How Quickly You Reach $1 Million&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg 404w"/></picture></div><a href="https://scroll.in/article/1091952/the-question-of-womens-athletic-performance-shouldnt-be-about-comparing-them-with-men?utm_source=firefox-newtab-en-intl" title="The Question of Women’s Athletic Performance Shouldn’t Be About Comparing Them With Men" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Scroll</p><header class="title clamp">The Question of Women’s Athletic Performance Shouldn’t Be About Comparing Them With Men</header><p class="excerpt clamp">Biology still sets upper limits of performance but are we providing women with the training and resources to maximise their potential?</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;The Question of Women’s Athletic Performance Shouldn’t Be About Comparing Them With Men&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg 404w"/></picture></div><a href="https://www.newindianexpress.com/thesundaystandard/2026/Apr/12/centre-asks-bureaucrats-to-sell-gaming-law-to-promote-e-sports?utm_source=firefox-newtab-en-intl" title="Centre Asks Bureaucrats to Sell Gaming Law to Promote E-Sports" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The New Indian Express</p><header class="title clamp">Centre Asks Bureaucrats to Sell Gaming Law to Promote E-Sports</header><p class="excerpt clamp">The directives also stated that the officers concerned have to implement it at full length and there has to be complete compliance with it.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Centre Asks Bureaucrats to Sell Gaming Law to Promote E-Sports&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/6907b195-3bc4-478e-986c-065d42837d6e.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6907b195-3bc4-478e-986c-065d42837d6e.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6907b195-3bc4-478e-986c-065d42837d6e.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6907b195-3bc4-478e-986c-065d42837d6e.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6907b195-3bc4-478e-986c-065d42837d6e.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6907b195-3bc4-478e-986c-065d42837d6e.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F6907b195-3bc4-478e-986c-065d42837d6e.jpeg 404w"/></picture></div><a href="https://www.moneycontrol.com/world/what-nasa-s-artemis-ii-mission-actually-revealed-about-life-and-space-travel-article-13886689.html?utm_source=firefox-newtab-en-intl" title="What NASA’s Artemis II Mission Actually Revealed About Life and Space Travel" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Money Control</p><header class="title clamp">What NASA’s Artemis II Mission Actually Revealed About Life and Space Travel</header><p class="excerpt clamp">From technical glitches and cramped living to viral moments and deeper insights about Earth, NASA’s Artemis II mission offered a rare, unfiltered look at what it takes to live and work in space.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;What NASA’s Artemis II Mission Actually Revealed About Life and Space Travel&quot;}" class="context-menu-button icon"></button></div></div></div></article></div></div></div><div><div class="ds-navigation ds-navigation-left-align "><span class="ds-navigation-header" data-l10n-id="newtab-pocket-read-more"></span><ul><li><a href="https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab">Self improvement</a></li><li><a href="https://getpocket.com/explore/food?utm_source=pocket-newtab">Food</a></li><li><a href="https://getpocket.com/explore/entertainment?utm_source=pocket-newtab">Entertainment</a></li><li><a href="https://getpocket.com/explore/health?utm_source=pocket-newtab">Health &amp; fitness</a></li><li><a href="https://getpocket.com/explore/science?utm_source=pocket-newtab">Science</a></li><li><a href="https://getpocket.com/explore?utm_source=pocket-newtab">More recommendations ›</a></li></ul><a href="https://www.mozilla.org/privacy/firefox/#recommend-relevant-content" class="ds-navigation-privacy"><span data-l10n-id="newtab-section-menu-privacy-notice"></span></a></div></div></div></div><style data-styles="[[null,{&quot;.ds-navigation&quot;:&quot;margin-top: -10px;&quot;}]]"></style></div></div></section><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div></div></div></div><style data-styles="[[null]]"></style></div></div></main><aside></aside></div></div>
+    </div>
+    <div id="footer-asrouter-container" role="presentation"></div>
+    <script src="about:home?jscache"></script>
+    <script async type="module" src="chrome://global/content/elements/moz-toggle.mjs"></script>
+  </body>
+</html>
+window.__FROM_STARTUP_CACHE__ = true;
+window.__STARTUP_STATE__ = {
+	"TopSites": {
+		"initialized": true,
+		"rows": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.in/?tag=admpdesktopin-21&ref=pd_sl_4a543dab209e6ff5cdb747bd7c3a6912600b8a6213cadd27ed485061&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.pdx1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgClnxGEkgClr4ZHW4CH_fZfW4pHnHnwqI%3DEYD%3DcYHFdZgF49DnIQfRNnCqjcfD_lCnuIEkw_CD3TJl_uFnd1Ek_oFFvQflaYBnu1fqdPFE3I4DdDBC743l7vCkjcfqdS3GvIfqIoFq37fdvGDCeg3cErCnvc7ReOgClWftaW7REkiCkX7RERiCkY7ndZj9eKiF3agCbnirjvIpkZ4CxXfCLW4QxnxGEwxRwvIpkZfpl_4pHafQDY4plY4Z8ZfQbnJG4kjpkW7R7kHnWzIncTxmDnx93kiF2zftIqx%3D4vIpkW7ncWfZd13clXCRvcjldCf9wfEclWCw3QslXCf9NfEcEkCEfWslXCfp7g3cEaCE3TIqdDHrNg2BIQj9wvIpkXfBIQxnEvIpkr4pfnx%3DXvIpkXfpbr7n3Zx%3D7vIpkXfpl_7n3Zx%3DcqjnwqgClWfpqnI94WHGEqjnwqgClW4QfnI94WiFzvIpkX1Cq_7ncqxmXvIpkZfpl_4pHafQDY4CLW4pqdfZLnxmXVj%3D_dJCkX7nEUEE7fgDX82C4nEw3%2F1cxmJRc5EqXZID_3jp424n3Tip8wfq7%2FHREiscEa2dvnDwjgfq_g3GNIfDvrI%3D7Iil%2F_DdES2QEnCDNWxCw3CQE%3DfkHwfqIvfqXXDFDa7C7tImdvicDaCd7V4FERHZbdfQq_4%3D35Iq_lfCN5jGqW2mzrD9v7sGH_Dc4BCnwZBnzTCr4kxk7i3%3DX4CZj34m7ifwE%3DEmcdEqEaDQepIqDrEDwmCnaZ2nuRJYDY3nuBJdeW4ndX4lzesG%2FrCc%2FZjGIo7R7kJrfz6QTS1Y%2FM6OIviFfz5ClM5ClM5ClM5ClM5ClnHrbzftaWfC2W5pbTfCbY1tWW5pbTfCbW4YWT5tWTj%3DwTIG4W5%3D7NHmuniFXTGm4VJn3dHmwmI2yy",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkZfpl%2B4pHafQDY4plY4Z8ZfQbnj9wWIBdvIpkY7n4YIFckiGIw5FwqgCxkfYIWJ%3DcQIFdwJR2uiF2zfCbW4YINItdZIFXwHr3vJmauiF2zfZbX1C2m1p8dfQDafp2%2B4Cfa7R4TJr2uJREuHnEYgCly",
+				"sponsored_tile_id": 74357,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xMDA5L2U1Y2JiODkxY2VlODQyMTI4ZjJhMzJjMjMyYjA4ZDg5Y2ZhN2I0ZmU2OTllMmY5YWY3OTYyY2Q2NmQ0MzRlMmYuSlBHEiB2tUyBPQI59PHRMtzI2KgW6uYtgY3XIflTk2YYEY1nWQ",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "http://ndtv.com/",
+				"hostname": "ndtv",
+				"sendAttributionRequest": false,
+				"label": "NDTV",
+				"typedBonus": true,
+				"screenshot": "moz-page-thumb://thumbnails/?url=http%3A%2F%2Fndtv.com%2F&revision=29"
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.reddit.com/",
+				"hostname": "reddit",
+				"sendAttributionRequest": false,
+				"label": "Reddit",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/reddit-com.png",
+				"typedBonus": true
+			}
+		],
+		"editForm": null,
+		"showSearchShortcutsForm": false,
+		"searchShortcuts": [
+			{
+				"keyword": "@google",
+				"shortURL": "google",
+				"url": "https://google.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/google-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/google-com.ico"
+			},
+			{
+				"keyword": "@bing",
+				"shortURL": "bing",
+				"url": "https://bing.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/bing-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/bing-com.ico"
+			},
+			{
+				"keyword": "@duckduckgo",
+				"shortURL": "duckduckgo",
+				"url": "https://duckduckgo.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/duckduckgo-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/duckduckgo-com.ico"
+			},
+			{
+				"keyword": "@wikipedia",
+				"shortURL": "wikipedia",
+				"url": "https://wikipedia.org",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico"
+			}
+		],
+		"sov": {
+			"ready": true,
+			"positions": [
+				{
+					"position": 1,
+					"assignedPartner": "amp"
+				},
+				{
+					"position": 2,
+					"assignedPartner": "amp"
+				},
+				{
+					"position": 3,
+					"assignedPartner": "amp"
+				}
+			]
+		},
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"App": {
+		"initialized": true,
+		"locale": "en-US",
+		"isForStartupCache": true,
+		"customizeMenuVisible": false,
+		"links": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.in/?tag=admpdesktopin-21&ref=pd_sl_4a543dab209e6ff5cdb747bd7c3a6912600b8a6213cadd27ed485061&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.pdx1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgClnxGEkgClr4ZHW4CH_fZfW4pHnHnwqI%3DEYD%3DcYHFdZgF49DnIQfRNnCqjcfD_lCnuIEkw_CD3TJl_uFnd1Ek_oFFvQflaYBnu1fqdPFE3I4DdDBC743l7vCkjcfqdS3GvIfqIoFq37fdvGDCeg3cErCnvc7ReOgClWftaW7REkiCkX7RERiCkY7ndZj9eKiF3agCbnirjvIpkZ4CxXfCLW4QxnxGEwxRwvIpkZfpl_4pHafQDY4plY4Z8ZfQbnJG4kjpkW7R7kHnWzIncTxmDnx93kiF2zftIqx%3D4vIpkW7ncWfZd13clXCRvcjldCf9wfEclWCw3QslXCf9NfEcEkCEfWslXCfp7g3cEaCE3TIqdDHrNg2BIQj9wvIpkXfBIQxnEvIpkr4pfnx%3DXvIpkXfpbr7n3Zx%3D7vIpkXfpl_7n3Zx%3DcqjnwqgClWfpqnI94WHGEqjnwqgClW4QfnI94WiFzvIpkX1Cq_7ncqxmXvIpkZfpl_4pHafQDY4CLW4pqdfZLnxmXVj%3D_dJCkX7nEUEE7fgDX82C4nEw3%2F1cxmJRc5EqXZID_3jp424n3Tip8wfq7%2FHREiscEa2dvnDwjgfq_g3GNIfDvrI%3D7Iil%2F_DdES2QEnCDNWxCw3CQE%3DfkHwfqIvfqXXDFDa7C7tImdvicDaCd7V4FERHZbdfQq_4%3D35Iq_lfCN5jGqW2mzrD9v7sGH_Dc4BCnwZBnzTCr4kxk7i3%3DX4CZj34m7ifwE%3DEmcdEqEaDQepIqDrEDwmCnaZ2nuRJYDY3nuBJdeW4ndX4lzesG%2FrCc%2FZjGIo7R7kJrfz6QTS1Y%2FM6OIviFfz5ClM5ClM5ClM5ClM5ClnHrbzftaWfC2W5pbTfCbY1tWW5pbTfCbW4YWT5tWTj%3DwTIG4W5%3D7NHmuniFXTGm4VJn3dHmwmI2yy",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkZfpl%2B4pHafQDY4plY4Z8ZfQbnj9wWIBdvIpkY7n4YIFckiGIw5FwqgCxkfYIWJ%3DcQIFdwJR2uiF2zfCbW4YINItdZIFXwHr3vJmauiF2zfZbX1C2m1p8dfQDafp2%2B4Cfa7R4TJr2uJREuHnEYgCly",
+				"sponsored_tile_id": 74357,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xMDA5L2U1Y2JiODkxY2VlODQyMTI4ZjJhMzJjMjMyYjA4ZDg5Y2ZhN2I0ZmU2OTllMmY5YWY3OTYyY2Q2NmQ0MzRlMmYuSlBHEiB2tUyBPQI59PHRMtzI2KgW6uYtgY3XIflTk2YYEY1nWQ",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "http://ndtv.com/",
+				"hostname": "ndtv",
+				"sendAttributionRequest": false,
+				"label": "NDTV",
+				"typedBonus": true,
+				"screenshot": "moz-page-thumb://thumbnails/?url=http%3A%2F%2Fndtv.com%2F&revision=29"
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.reddit.com/",
+				"hostname": "reddit",
+				"sendAttributionRequest": false,
+				"label": "Reddit",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/reddit-com.png",
+				"typedBonus": true
+			}
+		],
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"ASRouter": {
+		"initialized": false
+	},
+	"Prefs": {
+		"initialized": true,
+		"values": {
+			"default.sites": "https://www.youtube.com/,https://www.facebook.com/,https://www.wikipedia.org/,https://www.reddit.com/,https://www.amazon.com/,https://twitter.com/",
+			"feeds.section.topstories.options": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"hidden\":false,\"provider_icon\":\"chrome://global/skin/icons/pocket.svg\",\"provider_name\":\"Pocket\",\"read_more_endpoint\":\"https://getpocket.com/explore/trending?src=fx_new_tab\",\"stories_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=en-US&feed_variant=default_spocs_off\",\"stories_referrer\":\"https://getpocket.com/recommendations\",\"topics_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=en-US\",\"show_spocs\":false}",
+			"feeds.topsites": true,
+			"hideTopSitesTitle": false,
+			"showSponsored": true,
+			"system.showSponsored": false,
+			"showSponsoredTopSites": true,
+			"system.showWeather": false,
+			"showWeather": true,
+			"weather.query": "",
+			"weather.locationSearchEnabled": false,
+			"weather.temperatureUnits": "f",
+			"weather.display": "simple",
+			"pocketCta": "{\"cta_button\":\"\",\"cta_text\":\"\",\"cta_url\":\"\",\"use_cta\":false}",
+			"showSearch": true,
+			"topSitesRows": 1,
+			"telemetry": true,
+			"telemetry.ut.events": false,
+			"telemetry.structuredIngestion.endpoint": "https://incoming.telemetry.mozilla.org/submit",
+			"section.highlights.includeVisited": true,
+			"section.highlights.includeBookmarks": true,
+			"section.highlights.includePocket": true,
+			"section.highlights.includeDownloads": true,
+			"section.highlights.rows": 1,
+			"section.topstories.rows": 1,
+			"sectionOrder": "topsites,topstories,highlights",
+			"newtabWallpapers.enabled": false,
+			"newtabWallpapers.v2.enabled": false,
+			"newtabWallpapers.highlightEnabled": false,
+			"newtabWallpapers.highlightDismissed": false,
+			"newtabWallpapers.highlightSeenCounter": 0,
+			"newtabWallpapers.highlightHeaderText": "",
+			"newtabWallpapers.highlightContentText": "",
+			"newtabWallpapers.highlightCtaText": "",
+			"newtabWallpapers.wallpaper-light": "",
+			"newtabWallpapers.wallpaper-dark": "",
+			"newtabWallpapers.wallpaper": "",
+			"improvesearch.noDefaultSearchTile": true,
+			"improvesearch.topSiteSearchShortcuts.searchEngines": "google",
+			"improvesearch.topSiteSearchShortcuts.havePinned": "",
+			"asrouter.devtoolsEnabled": false,
+			"asrouter.providers.onboarding": "{\"id\":\"onboarding\",\"type\":\"local\",\"localProvider\":\"OnboardingMessageProvider\",\"enabled\":true,\"exclude\":[]}",
+			"discoverystream.flight.blocks": "{}",
+			"discoverystream.config": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"collapsible\":true,\"enabled\":true}",
+			"discoverystream.endpoints": "https://getpocket.cdn.mozilla.net/,https://firefox-api-proxy.cdn.mozilla.net/,https://spocs.getpocket.com/",
+			"discoverystream.isCollectionDismissible": true,
+			"discoverystream.onboardingExperience.dismissed": false,
+			"discoverystream.region-basic-layout": false,
+			"discoverystream.spoc.impressions": "{}",
+			"discoverystream.endpointSpocsClear": "https://spocs.getpocket.com/user",
+			"discoverystream.rec.impressions": "{\"5807773119837879\":1776052744012,\"2163484221010767\":1776052744050,\"2905458675833956\":1776052744053}",
+			"showRecentSaves": true,
+			"feeds.aboutpreferences": true,
+			"feeds.newtabinit": true,
+			"feeds.places": true,
+			"feeds.prefs": true,
+			"feeds.sections": true,
+			"feeds.section.highlights": false,
+			"feeds.system.topstories": true,
+			"feeds.systemtick": true,
+			"feeds.telemetry": true,
+			"feeds.favicon": true,
+			"feeds.system.topsites": true,
+			"feeds.recommendationprovider": true,
+			"feeds.discoverystreamfeed": true,
+			"feeds.wallpaperfeed": true,
+			"feeds.weatherfeed": true,
+			"isPrivateBrowsingEnabled": true,
+			"platform": "linux",
+			"region": "IN",
+			"fxa_endpoint": "https://accounts.firefox.com/",
+			"appUpdateChannel": "default",
+			"improvesearch.topSiteSearchShortcuts": true,
+			"mayHaveSponsoredTopSites": true,
+			"improvesearch.handoffToAwesomebar": true,
+			"featureConfig": {
+				"customizationMenuEnabled": null,
+				"topSitesContileEnabled": true
+			},
+			"pocketConfig": {
+				"spocPositions": "1,5,7,11,18,20",
+				"spocTopsitesPositions": "2",
+				"contileTopsitesPositions": "0,1,2",
+				"spocAdTypes": "",
+				"spocZoneIds": "",
+				"spocTopsitesAdTypes": "",
+				"spocTopsitesZoneIds": "",
+				"spocTopsitesPlacementEnabled": true,
+				"spocSiteId": "",
+				"widgetPositions": "",
+				"hybridLayout": false,
+				"hideCardBackground": false,
+				"fourCardLayout": false,
+				"newFooterSection": false,
+				"saveToPocketCard": true,
+				"saveToPocketCardRegions": "",
+				"hideDescriptions": false,
+				"hideDescriptionsRegions": "",
+				"compactGrid": false,
+				"compactImages": false,
+				"imageGradient": false,
+				"titleLines": 3,
+				"descLines": 3,
+				"onboardingExperience": false,
+				"essentialReadsHeader": false,
+				"editorsPicksHeader": false,
+				"recentSavesEnabled": false,
+				"readTime": true,
+				"newSponsoredLabel": false,
+				"sendToPocket": true,
+				"recsPersonalized": false,
+				"spocsPersonalized": true,
+				"spocsCacheTimeout": null,
+				"ctaButtonSponsors": "",
+				"ctaButtonVariant": "",
+				"spocMessageVariant": "",
+				"regionStoriesConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionBffConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionStoriesBlock": "",
+				"localeListConfig": "",
+				"regionSpocsConfig": "US,CA,DE,GB,FR,IT,ES",
+				"regionWeatherConfig": "",
+				"topSitesContileSovEnabled": true,
+				"pocketFeedParameters": ""
+			},
+			"logowordmark.alwaysVisible": true,
+			"feeds.section.topstories": true,
+			"discoverystream.enabled": true,
+			"discoverystream.sponsored-collections.enabled": false,
+			"discoverystream.hardcoded-basic-layout": false,
+			"discoverystream.personalization.enabled": true,
+			"discoverystream.personalization.override": false,
+			"discoverystream.personalization.modelKeys": "nb_model_arts_and_entertainment, nb_model_autos_and_vehicles, nb_model_beauty_and_fitness, nb_model_blogging_resources_and_services, nb_model_books_and_literature, nb_model_business_and_industrial, nb_model_computers_and_electronics, nb_model_finance, nb_model_food_and_drink, nb_model_games, nb_model_health, nb_model_hobbies_and_leisure, nb_model_home_and_garden, nb_model_internet_and_telecom, nb_model_jobs_and_education, nb_model_law_and_government, nb_model_online_communities, nb_model_people_and_society, nb_model_pets_and_animals, nb_model_real_estate, nb_model_reference, nb_model_science, nb_model_shopping, nb_model_sports, nb_model_travel",
+			"discoverystream.spocs-endpoint": "",
+			"discoverystream.spocs-endpoint-query": "",
+			"newNewtabExperience.colors": "#0090ED,#FF4F5F,#2AC3A2,#FF7139,#A172FF,#FFA437,#FF2A8A"
+		}
+	},
+	"Dialog": {
+		"visible": false,
+		"data": {}
+	},
+	"Sections": [
+		{
+			"title": {
+				"id": "newtab-section-header-stories"
+			},
+			"rows": [],
+			"enabled": true,
+			"id": "topstories",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recommended-by-header-generic"
+				},
+				"descString": {
+					"id": "home-prefs-recommended-by-description-generic"
+				},
+				"nestedPrefs": [],
+				"learnMore": {
+					"link": {
+						"href": "https://getpocket.com/firefox/new_tab_learn_more",
+						"id": "home-prefs-recommended-by-learn-more"
+					}
+				},
+				"collapsed": false,
+				"feed": "feeds.section.topstories"
+			},
+			"shouldHidePref": false,
+			"eventSource": "TOP_STORIES",
+			"icon": "chrome://global/skin/icons/pocket.svg",
+			"learnMore": {
+				"link": {
+					"href": "https://getpocket.com/firefox/new_tab_learn_more",
+					"message": {
+						"id": "newtab-pocket-learn-more"
+					}
+				}
+			},
+			"compactCards": false,
+			"rowsPref": "section.topstories.rows",
+			"maxRows": 4,
+			"availableLinkMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-topstories-generic"
+				},
+				"icon": "check"
+			},
+			"shouldSendImpressionStats": true,
+			"dedupeFrom": [
+				"highlights"
+			],
+			"options": {
+				"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+				"hidden": false,
+				"provider_icon": "chrome://global/skin/icons/pocket.svg",
+				"provider_name": "Pocket",
+				"read_more_endpoint": "https://getpocket.com/explore/trending?src=fx_new_tab",
+				"stories_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=en-US&feed_variant=default_spocs_off",
+				"stories_referrer": "https://getpocket.com/recommendations",
+				"topics_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=en-US",
+				"show_spocs": false
+			},
+			"contextMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"initialized": false,
+			"dedupeConfigurations": [
+				{
+					"id": "topstories",
+					"dedupeFrom": [
+						"highlights"
+					]
+				}
+			]
+		},
+		{
+			"title": {
+				"id": "newtab-section-header-recent-activity"
+			},
+			"rows": [],
+			"enabled": false,
+			"id": "highlights",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recent-activity-header"
+				},
+				"descString": {
+					"id": "home-prefs-recent-activity-description"
+				},
+				"nestedPrefs": [
+					{
+						"name": "section.highlights.includeVisited",
+						"titleString": "home-prefs-highlights-option-visited-pages"
+					},
+					{
+						"name": "section.highlights.includeBookmarks",
+						"titleString": "home-prefs-highlights-options-bookmarks"
+					},
+					{
+						"name": "section.highlights.includeDownloads",
+						"titleString": "home-prefs-highlights-option-most-recent-download"
+					},
+					{
+						"name": "section.highlights.includePocket",
+						"titleString": "home-prefs-highlights-option-saved-to-pocket",
+						"hidden": false
+					}
+				],
+				"collapsed": false,
+				"feed": "feeds.section.highlights"
+			},
+			"shouldHidePref": false,
+			"eventSource": "HIGHLIGHTS",
+			"icon": "chrome://global/skin/icons/highlights.svg",
+			"compactCards": true,
+			"rowsPref": "section.highlights.rows",
+			"maxRows": 4,
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-highlights"
+				},
+				"icon": "chrome://global/skin/icons/highlights.svg"
+			},
+			"shouldSendImpressionStats": false,
+			"options": {},
+			"initialized": false
+		}
+	],
+	"Pocket": {
+		"isUserLoggedIn": null,
+		"pocketCta": {},
+		"waitingForSpoc": true
+	},
+	"Personalization": {
+		"lastUpdated": null,
+		"initialized": false
+	},
+	"DiscoveryStream": {
+		"config": {
+			"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+			"collapsible": true,
+			"enabled": true
+		},
+		"layout": [
+			{
+				"width": 12,
+				"components": [
+					{
+						"type": "TopSites",
+						"header": {
+							"title": {
+								"id": "newtab-section-header-topsites"
+							}
+						},
+						"placement": {
+							"name": "sponsored-topsites",
+							"ad_types": [
+								3120
+							],
+							"zone_ids": [
+								280143
+							]
+						},
+						"spocs": {
+							"probability": 1,
+							"prefs": [
+								"showSponsoredTopSites"
+							],
+							"positions": [
+								{
+									"index": 2
+								}
+							]
+						},
+						"properties": {}
+					},
+					{
+						"type": "Message",
+						"essentialReadsHeader": false,
+						"editorsPicksHeader": false,
+						"header": {
+							"title": {
+								"id": "newtab-section-header-stories"
+							},
+							"subtitle": "",
+							"link_text": {
+								"id": "newtab-pocket-learn-more"
+							},
+							"link_url": "https://getpocket.com/firefox/new_tab_learn_more",
+							"icon": "chrome://global/skin/icons/pocket.svg"
+						},
+						"properties": {
+							"spocMessageVariant": ""
+						},
+						"styles": {
+							".ds-message": "margin-bottom: -20px"
+						}
+					},
+					{
+						"type": "CardGrid",
+						"properties": {
+							"items": 21,
+							"hybridLayout": false,
+							"hideCardBackground": false,
+							"fourCardLayout": false,
+							"compactGrid": false,
+							"essentialReadsHeader": false,
+							"editorsPicksHeader": false,
+							"onboardingExperience": false,
+							"ctaButtonSponsors": [
+								""
+							],
+							"ctaButtonVariant": "",
+							"spocMessageVariant": ""
+						},
+						"widgets": {
+							"positions": [],
+							"data": [
+								{
+									"type": "TopicsWidget"
+								}
+							]
+						},
+						"cta_variant": "link",
+						"header": {
+							"title": ""
+						},
+						"placement": {
+							"name": "spocs",
+							"ad_types": [
+								3617
+							],
+							"zone_ids": [
+								217758,
+								217995
+							]
+						},
+						"feed": {
+							"embed_reference": null,
+							"url": "https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30"
+						},
+						"spocs": {
+							"probability": 1,
+							"positions": [
+								{
+									"index": 1
+								},
+								{
+									"index": 5
+								},
+								{
+									"index": 7
+								},
+								{
+									"index": 11
+								},
+								{
+									"index": 18
+								},
+								{
+									"index": 20
+								}
+							]
+						}
+					},
+					{
+						"type": "Navigation",
+						"newFooterSection": false,
+						"properties": {
+							"alignment": "left-align",
+							"links": [
+								{
+									"name": "Self improvement",
+									"url": "https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Food",
+									"url": "https://getpocket.com/explore/food?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Entertainment",
+									"url": "https://getpocket.com/explore/entertainment?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Health & fitness",
+									"url": "https://getpocket.com/explore/health?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Science",
+									"url": "https://getpocket.com/explore/science?utm_source=pocket-newtab"
+								},
+								{
+									"name": "More recommendations ›",
+									"url": "https://getpocket.com/explore?utm_source=pocket-newtab"
+								}
+							],
+							"extraLinks": [
+								{
+									"name": "Career",
+									"url": "https://getpocket.com/explore/career?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Technology",
+									"url": "https://getpocket.com/explore/technology?utm_source=pocket-newtab"
+								}
+							],
+							"privacyNoticeURL": {
+								"url": "https://www.mozilla.org/privacy/firefox/#recommend-relevant-content",
+								"title": {
+									"id": "newtab-section-menu-privacy-notice"
+								}
+							}
+						},
+						"header": {
+							"title": {
+								"id": "newtab-pocket-read-more"
+							}
+						},
+						"styles": {
+							".ds-navigation": "margin-top: -10px;"
+						}
+					}
+				]
+			}
+		],
+		"isPrivacyInfoModalVisible": false,
+		"isCollectionDismissible": true,
+		"feeds": {
+			"data": {
+				"https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30": {
+					"lastUpdated": 1776056362043,
+					"personalized": false,
+					"data": {
+						"settings": {},
+						"recommendations": [
+							{
+								"id": 3573819738651585,
+								"url": "https://www.hindustantimes.com/trending/no-job-no-skills-at-26-woman-shares-how-she-found-direction-after-years-of-setbacks-101775906314445.html?utm_source=firefox-newtab-en-intl",
+								"title": "‘No Job, No Skills at 26’: Woman Shares How She Found Direction After Years of Setbacks",
+								"excerpt": "A woman shared how she went from jobless at 26 to rebuilding her career and helping others restart after career gaps. | Trending",
+								"publisher": "Hindustan Times",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/14ba81ad-74d2-4716-8716-11a0a5f621e1.jpeg",
+								"recommendation_id": "f02b6cac-48c1-4e0f-aff7-ee3ddc01eb2d",
+								"score": 1
+							},
+							{
+								"id": 8120973792647269,
+								"url": "https://www.firstpost.com/lifestyle/youre-sleeping-8-hours-so-why-are-you-still-exhausted-13997965.html?utm_source=firefox-newtab-en-intl",
+								"title": "You’re Sleeping 8 Hours — So Why Are You Still Exhausted?",
+								"excerpt": "Sleep scientists say the hours don’t matter as much as what happens inside them. Here’s why your body stops recovering during the night, and what you can do to fix it.",
+								"publisher": "Firstpost",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/f7fe9cb8-fb14-4e14-87c5-409386131fae.jpeg",
+								"recommendation_id": "2d3e9aed-9cfb-402f-bc97-537b2a058c0c",
+								"score": 1
+							},
+							{
+								"id": 1792597966492308,
+								"url": "https://www.mensxp.com/entertainment/bollywood/183132-remembering-asha-bhosle-the-queen-of-bollywood-vamp-songs-dance-numbers.html?utm_source=firefox-newtab-en-intl",
+								"title": "Remembering Asha Tai: How Asha Bhosle Gave Bollywood’s Vamps Their Most Seductive Voice",
+								"excerpt": "As Asha Bhosle passes away due to cardiac arrest in Mumbai, we can’t help but remember her legacy as the queen of Bollywood’s iconic vamp music and dance numbers.",
+								"publisher": "Mens XP",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d535ce87-fc2d-4cb8-b03e-896de608421c.jpeg",
+								"recommendation_id": "b33e4e1a-6ab6-4a09-ba68-a641c4055b70",
+								"score": 1
+							},
+							{
+								"id": 4410155121154920,
+								"url": "https://www.architecturaldigest.in/story/beautiful-mosques-old-and-new-designed-by-women/?utm_source=firefox-newtab-en-intl",
+								"title": "5 Beautiful Mosques, Old and New, Designed by Women",
+								"excerpt": "In 859 Fez, refugee, Fatima Al-Fihri designed Al Qarawiyyin university and mosque, the world's oldest, predating Oxford University and the Sorbonne",
+								"publisher": "AD India",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8ef4391d-4c44-4060-ac00-9db96a1639c2.jpeg",
+								"recommendation_id": "f7ce785b-81d3-4537-8a92-8c43db691273",
+								"score": 1
+							},
+							{
+								"id": 8009242886863664,
+								"url": "https://www.hindustantimes.com/lifestyle/health/harvard-columbia-cornell-trained-american-doctor-shares-secret-hack-to-literally-grow-your-brain-even-as-an-adult-daily-101775894439350.html?utm_source=firefox-newtab-en-intl",
+								"title": "Harvard, Columbia, Cornell-Trained Doctor Shares ‘Secret Hack to Literally Grow Your Brain Even As an Adult’: So Easy…",
+								"excerpt": "Low-impact activities like daily walking are crucial for neurological health in midlife, helping to alleviate stress and enhance brain function, Dr Shah said",
+								"publisher": "Hindustan Times",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7a6feb89-c8ed-477c-8f9d-325351248a1b.jpeg",
+								"recommendation_id": "2ed67216-4651-46e3-a614-fcacea5c8056",
+								"score": 1
+							},
+							{
+								"id": 7815712876383333,
+								"url": "https://www.vogue.in/content/the-best-thing-to-bring-back-from-your-travels-a-hobby?utm_source=firefox-newtab-en-intl",
+								"title": "The Best Thing to Bring Back From Your Travels? a Hobby",
+								"excerpt": "Burnt out in their daily lives, people are touting ‘side quests’, ‘serial hobbies’ and ‘funmaxxing’ as alternative ways of travelling",
+								"publisher": "Vogue India",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7e3e7be5-55d7-4ac4-8b0e-c0a5f34fd0a1.jpeg",
+								"recommendation_id": "3ff4d5dc-6a43-43f4-945f-df3f56ab7ac1",
+								"score": 1
+							},
+							{
+								"id": 2389412538121356,
+								"url": "https://www.indiatoday.in/jobs/story/ai-skills-gap-grows-as-teens-build-businesses-and-earn-before-turning-18-educ-2894156-2026-04-11?utm_source=firefox-newtab-en-intl",
+								"title": "Gen Z AI Kids Are Hiring Parents, Dropping School, and Building Real Businesses",
+								"excerpt": "Gen Z is not just using AI, it is building with it. From a 12-year-old hiring her mother to teenage founders running AI startups, a new generation is racing ahead. The gap is growing between those who can truly use AI and those who cannot, shaping the future of work.",
+								"publisher": "India Today",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/04345a8b-ff2e-4724-86d9-1dc270d82df2.jpeg",
+								"recommendation_id": "68a691e1-a3fa-4ac9-a130-2b76e8faadfe",
+								"score": 1
+							},
+							{
+								"id": 5539851197334341,
+								"url": "https://www.livemint.com/science/health/working-late-bengaluru-doctor-reveals-the-hidden-damage-to-your-heart-sleep-and-spine-11775762858662.html?utm_source=firefox-newtab-en-intl",
+								"title": "Working Late? Bengaluru Doctor Reveals the Hidden Damage to Your Heart, Sleep and Spine",
+								"excerpt": "Long working hours may seem unavoidable, but experts warn they can quietly impact heart health, spine, sleep and mental well-being. Here’s how your daily routine could be affecting your body — and what you can do about it.",
+								"publisher": "Mint",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8bbc35fa-783e-4eb8-b7ce-f838ead021f5.jpeg",
+								"recommendation_id": "c3d47429-5be3-4201-a0c7-ca920bca46a5",
+								"score": 1
+							},
+							{
+								"id": 7495860939203038,
+								"url": "https://www.fortuneindia.com/business-news/from-kitchens-to-cloud-kitchens-ready-meals-gain-ground-as-india-eases-lpg-dependence/132275?utm_source=firefox-newtab-en-intl",
+								"title": "From Kitchens to Cloud Kitchens, Ready Meals Gain Ground As India Eases LPG Dependence",
+								"excerpt": "From LPG shocks to ready meals: India’s kitchen is going convenience‑first",
+								"publisher": "Fortune India",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/afa38b79-1667-4e0d-bea4-19a50b871baf.jpeg",
+								"recommendation_id": "9ff9aa43-8216-404d-baf9-b2e2a2cc8000",
+								"score": 1
+							},
+							{
+								"id": 3487183741247486,
+								"url": "https://www.thequint.com/news/breaking-news/pm-modi-urges-womens-reservation-act-implementation?utm_source=firefox-newtab-en-intl",
+								"title": "PM Modi Urges All Parties to Clear Amendments to Women’s Reservation Bill",
+								"excerpt": "PM Modi calls for immediate Women’s Reservation Act implementation; opposition leaders demand transparency and all-party consultation before legislative changes.",
+								"publisher": "The Quint",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2e317181-b99b-47db-be93-b3663c6503d5.jpeg",
+								"recommendation_id": "2fc21270-b5c9-45c7-97c2-a7619075518b",
+								"score": 1
+							},
+							{
+								"id": 5133145019590595,
+								"url": "https://www.theweek.in/theweek/leisure/2026/04/11/from-woodpeckers-to-crash-helmets-the-unconventional-science-of-ig-nobel-prize.html?utm_source=firefox-newtab-en-intl",
+								"title": "From Woodpeckers to Crash Helmets: The Unconventional Science of Ig Nobel Prize",
+								"excerpt": "Why is airlifting rhinos upside down the best way to transport them? Can rollercoasters help pass kidney stones? Welcome to the Ig Nobel Prizes and the science that makes you laugh first, and then think",
+								"publisher": "The Week",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/5ce30c24-7a8a-40a4-aeb8-6f100d8cfce1.jpeg",
+								"recommendation_id": "bcee846d-f600-4d05-a747-c2dfe0eaf14e",
+								"score": 1
+							},
+							{
+								"id": 7432137907462824,
+								"url": "https://www.cricbuzz.com/cricket-news/138330/ipl-pulse-existential-but-make-it-cricket-cricbuzzcom?utm_source=firefox-newtab-en-intl",
+								"title": "IPL Pulse: Existential, but Make It Cricket",
+								"excerpt": "Your 2-minute morning scan of the IPL universe",
+								"publisher": "Cricbuzz",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8f43a20b-db74-4369-8360-87a3a58c6c89.jpeg",
+								"recommendation_id": "c643e085-c771-4717-a555-192799480e78",
+								"score": 1
+							},
+							{
+								"id": 8564592339507287,
+								"url": "https://indianexpress.com/article/education/55-year-old-rajasthan-ex-serviceman-138-degrees-earns-latest-ignou-10632745/?utm_source=firefox-newtab-en-intl",
+								"title": "55-Year-Old Rajasthan Ex-Serviceman With 138 Degrees Earns Latest From IGNOU",
+								"excerpt": "Dashrath Singh, who belongs to a farming family, said that he always felt his education was “incomplete” while in the service.",
+								"publisher": "The Indian Express",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/716316c6-0982-4350-b475-6c3c1ad22796.jpeg",
+								"recommendation_id": "11a69873-3588-4657-9708-20c44712c7ae",
+								"score": 1
+							},
+							{
+								"id": 7347494994124043,
+								"url": "https://www.forbes.com/sites/mariaross/2026/04/09/the-best-empathy-training-for-leaders-parenting-a-kid/?utm_source=firefox-newtab-en-intl",
+								"title": "The Best Empathy Training for Leaders? Parenting a Kid",
+								"excerpt": "The best empathy training doesn’t cost a dime. Three leadership lessons on modeling, perspective-taking, and walking your talk — learned from a 12-year-old.",
+								"publisher": "Forbes",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8488d81e-1e56-4870-9c23-03300de3b880.jpeg",
+								"recommendation_id": "90feebdc-4da1-4ba8-8023-4f5fc992eaab",
+								"score": 1
+							},
+							{
+								"id": 2155876986751731,
+								"url": "https://www.deccanherald.com/entertainment/actor-ranvir-shorey-says-indie-films-losing-ground-on-both-theatres-and-streaming-3964359?utm_source=firefox-newtab-en-intl",
+								"title": "Actor Ranvir Shorey Says Indie Films Losing Ground on Both Theatres and Streaming",
+								"excerpt": "Theatre Challenges: Ranvir Shorey shares his concerns over indie films losing viewers on streaming platforms amid large-scale productions like Dhurandhar. Shorey, renowned for indie cinema, highlights the struggles of films like 'Everybody Loves Sohrab Handa'.",
+								"publisher": "Deccan Herald",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/649dee5e-b76b-4da8-9a50-d36ebafb3570.jpeg",
+								"recommendation_id": "a3d3be05-e0c4-4854-a327-db42f840c2ff",
+								"score": 1
+							},
+							{
+								"id": 2364710119493452,
+								"url": "https://theweek.com/personal-finance/satoshi-nakamoto-the-mystery-behind-the-creator-of-bitcoin?utm_source=firefox-newtab-en-intl",
+								"title": "Satoshi Nakamoto: the mystery behind the creator of Bitcoin",
+								"excerpt": "New investigation sheds light on identity of cryptocurrency’s shadowy founder",
+								"publisher": "The Week",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/6dfa502c-8376-4895-b46b-a83a90174a2c.jpeg",
+								"recommendation_id": "23386b37-3dde-4334-9b56-4e18cbdb616c",
+								"score": 1
+							},
+							{
+								"id": 2387508189718208,
+								"url": "https://www.goodhousekeeping.com/life/parenting/a70984904/bad-kid-behavior-good-parenting-signs/?utm_source=firefox-newtab-en-intl",
+								"title": "If Your Kids Do These “Bad” Things, It Could Actually Be a Sign of Good Parenting",
+								"excerpt": "You’re doing a better job than you think!",
+								"publisher": "Good Housekeeping",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/edee3aa1-8483-48cd-9e07-d5c3ef5a9640.jpeg",
+								"recommendation_id": "16098906-dd8c-47ed-9de6-5c68e6f288ad",
+								"score": 1
+							},
+							{
+								"id": 8410498123359603,
+								"url": "https://www.investopedia.com/how-starting-to-save-at-25-35-or-45-affects-how-quickly-you-reach-usd1-million-11947921?utm_source=firefox-newtab-en-intl",
+								"title": "How Starting to Save at 25, 35, or 45 Affects How Quickly You Reach $1 Million",
+								"excerpt": "Starting earlier doesn’t make $1M arrive faster—but it does mean getting there younger. Here’s how starting to save at 25, 35, or 45 changes the timeline.",
+								"publisher": "Investopedia",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/a8185663-bc5f-462f-b48f-2eac01e4ae98.jpeg",
+								"recommendation_id": "e491af44-b276-480d-b494-0b767ce4e123",
+								"score": 1
+							},
+							{
+								"id": 353610014861008,
+								"url": "https://scroll.in/article/1091952/the-question-of-womens-athletic-performance-shouldnt-be-about-comparing-them-with-men?utm_source=firefox-newtab-en-intl",
+								"title": "The Question of Women’s Athletic Performance Shouldn’t Be About Comparing Them With Men",
+								"excerpt": "Biology still sets upper limits of performance but are we providing women with the training and resources to maximise their potential?",
+								"publisher": "Scroll",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2b23e29c-89ad-4ecc-bf9a-7a7d263ac7f3.jpeg",
+								"recommendation_id": "8a4d112f-e9c4-4d7c-822f-b6a13466e106",
+								"score": 1
+							},
+							{
+								"id": 5196758433646296,
+								"url": "https://www.newindianexpress.com/thesundaystandard/2026/Apr/12/centre-asks-bureaucrats-to-sell-gaming-law-to-promote-e-sports?utm_source=firefox-newtab-en-intl",
+								"title": "Centre Asks Bureaucrats to Sell Gaming Law to Promote E-Sports",
+								"excerpt": "The directives also stated that the officers concerned have to implement it at full length and there has to be complete compliance with it.",
+								"publisher": "The New Indian Express",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b116024c-f68f-47a2-926d-2e9e9b04dfef.jpeg",
+								"recommendation_id": "70c8bfc5-2939-45ef-b008-6887232542ff",
+								"score": 1
+							},
+							{
+								"id": 2642118738285586,
+								"url": "https://www.moneycontrol.com/world/what-nasa-s-artemis-ii-mission-actually-revealed-about-life-and-space-travel-article-13886689.html?utm_source=firefox-newtab-en-intl",
+								"title": "What NASA’s Artemis II Mission Actually Revealed About Life and Space Travel",
+								"excerpt": "From technical glitches and cramped living to viral moments and deeper insights about Earth, NASA’s Artemis II mission offered a rare, unfiltered look at what it takes to live and work in space.",
+								"publisher": "Money Control",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/6907b195-3bc4-478e-986c-065d42837d6e.jpeg",
+								"recommendation_id": "393ffaa9-8f98-40e3-aaf3-95f137414def",
+								"score": 1
+							},
+							{
+								"id": 1204048295568945,
+								"url": "https://www.forbes.com/sites/quickerbettertech/2026/04/12/the-main-street-tech-report-how-to-switch-from-chatgpt-to-claude/?utm_source=firefox-newtab-en-intl",
+								"title": "The Main Street Tech Report: How to Switch From ChatGPT to Claude",
+								"excerpt": "Explore this week’s Main Street Tech Report featuring key AI and technology trends—from Claude and Copilot to SEO and automation—and how they impact small businesses.",
+								"publisher": "Forbes",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/6ffbe3eb-f302-4374-ac7e-d41c39f6e132.jpeg",
+								"recommendation_id": "7b88ac62-b957-4214-9c15-171c85f66141",
+								"score": 1
+							},
+							{
+								"id": 3333109004203876,
+								"url": "https://indianexpress.com/article/technology/tech-news-technology/handy-guide-accessibility-settings-ageing-parents-10632548/?utm_source=firefox-newtab-en-intl",
+								"title": "A Handy Guide to Accessibility Settings on Modern Devices. Your Ageing Parents Will Thank You",
+								"excerpt": "In an industry obsessed with younger demographics, older adults are often left behind, despite holding the most purchasing power. Find out how accessibility features like Apple’s ‘Assistive Access’ and Google’s ‘Select to Speak’ are making devices more inclusive.",
+								"publisher": "The Indian Express",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b7e36203-680d-430b-89cf-199d48fff4df.jpeg",
+								"recommendation_id": "19cbaea0-827e-4044-824a-09f34df67523",
+								"score": 1
+							},
+							{
+								"id": 3708527919800492,
+								"url": "https://www.architecturaldigest.in/story/this-7500-square-foot-farmhouse-in-raipur-is-a-warm-tactile-haven/?utm_source=firefox-newtab-en-intl",
+								"title": "This 7,500-Square-Foot Farmhouse in Raipur Is a Warm, Tactile Haven",
+								"excerpt": "At a farmhouse in Raipur, Ayesha Kansal of Art of Space crafts a home rooted in Indian materials, recognisable motifs and quiet detail.",
+								"publisher": "AD India",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8c74044d-91f0-4227-b7e8-a25bf15b2fe1.jpeg",
+								"recommendation_id": "3c9695cf-eeb9-4be6-8cab-468dc25247be",
+								"score": 1
+							},
+							{
+								"id": 8406616598003166,
+								"url": "https://www.indiatoday.in/jobs/story/memes-at-work-humour-helps-communication-but-risks-professionalism-educ-2892733-2026-04-11?utm_source=firefox-newtab-en-intl",
+								"title": "Everyone’s Talking in Memes at Work. but Is Humour Killing Professionalism?",
+								"excerpt": "Memes have evolved beyond internet jokes to become a vital part of corporate communication, influencing how employees interact and relate at work.",
+								"publisher": "India Today",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/360fadc0-7910-425c-a18d-2bb83441cda8.jpeg",
+								"recommendation_id": "abe585f0-6238-45f5-b5eb-d579d30db9a4",
+								"score": 1
+							},
+							{
+								"id": 2905458675833956,
+								"url": "https://www.firstpost.com/lifestyle/best-hydrating-fruits-summer-heat-13998513.html?utm_source=firefox-newtab-en-intl",
+								"title": "These Fruits Can Keep You Better Hydrated Than Water in the Summer",
+								"excerpt": "From watermelon to cucumber, these hydrating fruits help you stay cool, replenish electrolytes and beat the summer heat more effectively.",
+								"publisher": "Firstpost",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/f980357b-4928-4fd3-aa96-042e3d156e54.jpeg",
+								"recommendation_id": "0713c6db-ea1a-45a2-81be-25a2a7f2f603",
+								"score": 1
+							},
+							{
+								"id": 5807773119837879,
+								"url": "https://www.thehindu.com/news/international/iran-israel-us-war-west-asia-conflict-live-updates-on-april-12-2026/article70853206.ece?utm_source=firefox-newtab-en-intl",
+								"title": "Israel-Iran War LIVE Updates: U.S. to Start Blockading the Strait of Hormuz Immediately, Says Trump",
+								"excerpt": "Follow The Hindu LIVE for the latest updates on the escalating crisis in the Iran-Israel-U.S. war on April 12, 2026.",
+								"publisher": "The Hindu",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/925a3d3f-ee13-47f8-80db-86e36931d4ff.jpeg",
+								"recommendation_id": "fdaf991d-f4ef-4bfd-ba0f-7cdd4ec26a71",
+								"score": 1
+							},
+							{
+								"id": 2163484221010767,
+								"url": "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science?utm_source=firefox-newtab-en-intl",
+								"title": "How Ancient India Predicted Rains Before the Arrival of Modern Science",
+								"excerpt": "On a humid afternoon, just before the monsoon breaks, small signs begin to appear. Ants carry their eggs to higher ground. The air thickens. ",
+								"publisher": "Swarajya Magazine",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/338ab5ae-bb5c-4173-ba7b-2ee0ef098a95.jpeg",
+								"recommendation_id": "5b6b4ba3-7399-4ca7-9487-bccbfe11399e",
+								"score": 1
+							}
+						],
+						"status": "success"
+					}
+				}
+			},
+			"loaded": true
+		},
+		"spocs": {
+			"spocs_endpoint": "https://spocs.getpocket.com/spocs",
+			"lastUpdated": 1776056362237,
+			"data": {
+				"settings": {
+					"feature_flags": {
+						"collections": false,
+						"spoc_v2": true
+					},
+					"spocsPerNewTabs": 1,
+					"domainAffinityParameterSets": {
+						"default": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 1,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 2,
+							"perfectFrequencyVisits": 10,
+							"recencyFactor": 0.5
+						},
+						"fully-personalized": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 2,
+							"perfectFrequencyVisits": 10,
+							"recencyFactor": 0.5
+						},
+						"fully-personalized-domains": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 10,
+							"perfectFrequencyVisits": 1,
+							"recencyFactor": 0.5
+						}
+					},
+					"timeSegments": [
+						{
+							"id": "week-1",
+							"startTime": 432000,
+							"endTime": 0,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-2",
+							"startTime": 864000,
+							"endTime": 432000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-3",
+							"startTime": 1296000,
+							"endTime": 864000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-4",
+							"startTime": 1728000,
+							"endTime": 1296000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-5",
+							"startTime": 2160000,
+							"endTime": 1728000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-6",
+							"startTime": 2592000,
+							"endTime": 2160000,
+							"weightPosition": 1
+						}
+					]
+				},
+				"sponsored-topsites": {
+					"title": "",
+					"context": "",
+					"items": []
+				}
+			},
+			"loaded": true,
+			"frequency_caps": [],
+			"blocked": [],
+			"placements": [
+				{
+					"name": "sponsored-topsites",
+					"ad_types": [
+						3120
+					],
+					"zone_ids": [
+						280143
+					]
+				}
+			]
+		},
+		"experimentData": {
+			"utmSource": "pocket-newtab"
+		},
+		"recentSavesData": [],
+		"isUserLoggedIn": false,
+		"recentSavesEnabled": false,
+		"pocketButtonEnabled": true,
+		"saveToPocketCard": true,
+		"hideDescriptions": false,
+		"compactImages": false,
+		"imageGradient": false,
+		"newSponsoredLabel": false,
+		"titleLines": 3,
+		"descLines": 3,
+		"readTime": true
+	},
+	"Search": {
+		"fakeFocus": false,
+		"hide": false
+	},
+	"Wallpapers": {
+		"wallpaperList": [],
+		"highlightSeenCounter": {
+			"value": 0
+		},
+		"categories": []
+	},
+	"Weather": {
+		"initialized": false,
+		"lastUpdated": null,
+		"query": "",
+		"suggestions": [],
+		"locationData": {
+			"city": "",
+			"adminArea": "",
+			"country": ""
+		},
+		"searchActive": false,
+		"locationSearchString": "",
+		"suggestedLocations": []
+	}
+};
+
+:���ii           i�~I`�A����       :about:home alt-data 1;75815,script version 20250327062836  �
